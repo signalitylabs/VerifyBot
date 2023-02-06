@@ -1,0 +1,17 @@
+{
+  "name": "verificationbot",
+  "version": "1",
+  "description": "Signality Verification Bot",
+  "main": "src/index.js",
+  "engines": {
+    "npm": ">=6.14.13",
+    "node": ">=17.0.1"
+  },
+  "dependencies": {
+    "discord": "^0.8.2",
+    "discord.js": "^14.7.1",
+    "request": "^2.88.2"
+  },
+  "author": "Centers",
+  "license": "UNLICENSED"
+}

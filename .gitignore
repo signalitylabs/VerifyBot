@@ -1,0 +1,6 @@
+*.icloud
+*.DS_Store
+*.env
+*.vscode
+node_modules
+cache
