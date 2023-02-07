@@ -74,6 +74,7 @@
   * **PAYPAL_CLIENT** ```PayPal client API key```
   * **PAYPAL_SECRET** ```PayPal secret API key```
     - Create a Live PayPal API application (not sandbox) [developer.paypal.com/](https://developer.paypal.com/)
+    - Give the API keys permission for "Transaction Search"
 
 
   ## Config Settings
