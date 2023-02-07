@@ -29,7 +29,7 @@
 <div align=center>
 
 [![Discord](https://img.shields.io/discord/753770820358373487.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/EQnbYyYBmG)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=signalitylabs_Baylee-v1&metric=ncloc)](https://sonarcloud.io/dashboard?id=signalitylabs_Baylee-v1)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=signalitylabs_VerifyPurchaseBot&metric=ncloc)](https://sonarcloud.io/dashboard?id=signalitylabs_Baylee-v1)
 
 </div>
 
@@ -63,8 +63,6 @@
   ```https://discord.com/oauth2/authorize?client_id={BOT-ID}&scope=bot&permissions={PERMISSIONS}&redirect_uri={REDIRECT}```
   6. Start the bot up
   
-  For easy setup [I recommend using Heroku](https://shiffman.net/a2z/bot-heroku/).
-
 
   ## Environmental Variables
   [Using Visual Studio Code? Tap here to learn how set this up](https://stackoverflow.com/questions/29971572/how-do-i-add-environment-variables-to-launch-json-in-vscode).
