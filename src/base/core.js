@@ -1,14 +1,14 @@
 const { Client, GatewayIntentBits, ActivityType }    = require('discord.js');
 const fs                        = require('fs');
 const util                      = require('util');
-const config                    = require('../base/config.json');
+const config                    = require('../config.json');
 const readdir                   = util.promisify(fs.readdir);
 
 /**
- * Baylee Client
+ * Core Client
  * @extends {Client}
  */
-class Baylee extends Client { 
+class Core extends Client { 
 	constructor() {
         super({
             partials: ['GUILD_MEMBER',
@@ -74,4 +74,4 @@ class Baylee extends Client {
     }
 }
 
-module.exports = Baylee;
+module.exports = Core;

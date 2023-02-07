@@ -1,9 +1,0 @@
-{
-    "commands": [
-                {
-                    "name": "📘 Info",
-                    "hover": "Information about this bot and server",
-                    "folder": "info"
-                }
-    ]
-}

@@ -16,13 +16,11 @@
 
 
 const { REST, Routes }          = require('discord.js');
-const bot                       = require('./base/baylee.js');
+const bot                       = require('./base/core.js');
 const eventLoader               = require('./base/loaders/events');
 const commandLoader             = require('./base/loaders/commands');
 const errorHandler              = require('./base/handlers/error');
-const client  = new bot();
-
-require('./structures');
+const client                    = new bot();
 
 
 const { Client,  }  = require('discord.js');

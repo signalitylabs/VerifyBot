@@ -1,0 +1,19 @@
+{
+    "Bot": [
+        {
+            "name": "Verify Bot",
+            "description": "Created by <@148287587272884225>",
+            "icon": "https://i.imgur.com/tB1hKuT.png"
+        }
+    ],
+    "PayPal": [
+        {
+            "monthsToCheck": 3
+        }
+    ],
+    "Verify": [
+        {
+            "discordRoleID": "1066821968931864626",
+            "searchFor": "Epic Core"
+        }]
+}

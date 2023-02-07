@@ -6,17 +6,17 @@ class about extends command {
      * @param {object} msg 
      */
     async onInteraction(interaction) {
-        var settings    = this.config;
-        var client      = this.client;
+        var client    = this.client;
+        var config    = client.getConfig();
 
         //Basic information about the server we're on
         interaction.reply({ embeds: [{
             color: 0xff8c00,
             author: {
-                name: 'v' + client.info.version,
-                icon_url: 'https://i.imgur.com/tB1hKuT.png',
+                name: config.Bot[0].name + ' v' + client.info.version,
+                icon_url: config.Bot[0].icon,
             },
-            description: 'Created by <@148287587272884225>',
+            description: config.Bot[0].description,
             fields: [{
                 name: 'Total Members',
                 value: `${interaction.guild.memberCount} `,
@@ -53,7 +53,7 @@ class about extends command {
     config = {
         info: {
             name: 'about',
-            description: '📰 General bot information',
+            description: '📰 Useless bot information',
         }
     }
 }

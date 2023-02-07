@@ -24,7 +24,6 @@ module.exports = {
         
         if(file.endsWith('.js')) { 
             var inc   = require(`../../events/${file}`);
-            
             events[file] = new inc(client);
             console.log(`${count}> /events/${file}`);
             count++;

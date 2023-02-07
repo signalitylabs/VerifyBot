@@ -8,26 +8,9 @@
 module.exports = class {
     constructor(client, db) {
         client.on('interactionCreate', async (interaction) => {
-            //If we're in Dev Mode then only look in the testing channel
-            if(process.env.DEV_MODE) {
-                if(msg.channel.id !== process.env.DEV_CHANNEL) { return; }
-            }
-
-            //If we need to ignore a channel, let's do it
-            if(process.env.CHANNEL_IGNORE) {
-                if(msg.channel.id == process.env.CHANNEL_IGNORE) { return; }
-            }
-            
              //localize modules
             var commands    = client.commands;
-            var listeners   = client.listeners;
 
-            /*
-                Handle Commands
-                Mostly just chat commands. Commands are restricted to specific
-                triggers and are only called upon if their trigger
-                is mentioned
-            */
             if(commands) {
                 //Loop through all the commands
                 var keys = Object.keys(commands);

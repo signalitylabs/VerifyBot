@@ -19,16 +19,12 @@ class command {
         return this.module;
     }
 
-    privateReply(interaction, message) {
-        interaction.reply({ content: message, ephemeral: true });
-    }
-
-    /**
-     * Triggered when someone uses this command
-     * @param {object} msg 
-     */
     async onChat(msg) {
         throw new Error(`Command does not have an onChat event`);
+    }
+
+    async onInteraction(interaction) {
+        throw new Error(`Command does not have an onInteraction event`);
     }
 }
 
