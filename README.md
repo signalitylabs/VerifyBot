@@ -52,6 +52,10 @@
   - 📰 **About** `Quick plugin / server information`
   - 🔍 **Verify** `Verify PayPal purchase to unlock Discord role`
 
+  ### Other Features
+  - **Detailed logs** `Logs are saved to the logs folder`
+  - **Caching** `PayPal transactions are cached for 10 minutes (configure in config.json) in the cache folder`
+
 
   ## Getting Started
 
@@ -84,6 +88,7 @@
     - `General bot information that's only displayed in the /about command`
   - **PayPal**
     - <u>monthsToCheck</u> `How many months to go back when searching for a purchase. The higher the number, the longer it takes. Recommended to not go above 6 (but I'm not your mom)`
+    - <u>cacheExpiresInMins</u> `The amount of time (in minutes) before the cache expires`
   - **Verify**
     - This is an array so you can add multiple in this section
     - <u>discordRoleID</u> `The Discord role to give a member when their purchase is verified`

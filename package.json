@@ -1,6 +1,6 @@
 {
   "name": "verificationbot",
-  "version": "1",
+  "version": "1.1",
   "description": "Signality Verification Bot",
   "main": "src/index.js",
   "engines": {

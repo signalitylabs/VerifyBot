@@ -8,6 +8,7 @@
     ],
     "PayPal": [
         {
+            "cacheExpiresInMins": 10,
             "monthsToCheck": 3
         }
     ],

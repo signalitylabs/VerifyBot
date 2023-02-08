@@ -2,7 +2,20 @@ const { Client, GatewayIntentBits, ActivityType }    = require('discord.js');
 const fs                        = require('fs');
 const util                      = require('util');
 const config                    = require('../config.json');
-const readdir                   = util.promisify(fs.readdir);
+
+// Handle Logging //
+if (!fs.existsSync(`./logs`)) fs.mkdirSync(`./logs`);
+const date      = new Date();
+const logDate   = `${date.getFullYear() + 1}-${date.getMonth()}-${date.getDate()}-${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
+const logFile   = fs.createWriteStream(`./logs/${logDate}.log`, {flags : 'w'});
+
+console.log = function(d) {
+    const now = new Date();
+    const formattedDate = `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+
+    logFile.write(util.format(`[${formattedDate}] ${d}`) + '\n');
+    console.debug(d);
+};
 
 /**
  * Core Client

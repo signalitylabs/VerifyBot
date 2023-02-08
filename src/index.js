@@ -30,7 +30,7 @@ const rest          = new REST({ version: '10' }).setToken(BOT_TOKEN);
 
 (async () => {
     try {
-        console.log(`⭐ Verification Bot v${client.info.version}`);
+        console.log(`✅ Verification Bot v${client.info.version}`);
 
         await eventLoader.getEvents(client);
         commands = await commandLoader.getCommands(client);
@@ -55,7 +55,7 @@ const rest          = new REST({ version: '10' }).setToken(BOT_TOKEN);
 })();
 
 client.on('ready', () => {
-    console.log(`⭐ Logged in as ${client.user.tag}`);
+    console.log(`✅ Logged in as ${client.user.tag}`);
 
     process.on('disconnect', () => errorHandler.disconnect())
     .on('reconnecting', () => errorHandler.reconnecting())

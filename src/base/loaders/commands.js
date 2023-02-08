@@ -21,11 +21,6 @@ module.exports = {
         var inc   = require(`../../commands/${file}`);
         commands[file] = new inc(client);
 
-        if(typeof commands[file].setModule !== 'function') {
-          console.log(`${count}> [MODULE ERROR] Cannot set module for ${file}`);
-          return;
-        }
-
         commands[file].setClient(client);
         
         var config = commands[file].getConfig();
