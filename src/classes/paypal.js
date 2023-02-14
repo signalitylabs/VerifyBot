@@ -158,7 +158,7 @@ module.exports = class PayPalAPI {
         var history     = JSON.parse(data).transaction_details;
 
         if(config.Verify == undefined) {
-            console.log('No roles to verify, check your config.json file');
+            console.log('No roles to verify. Please check your config file');
             return foundBuyer;
         }
 
