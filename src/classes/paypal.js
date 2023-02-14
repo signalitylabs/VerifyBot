@@ -45,9 +45,6 @@ module.exports = class PayPalAPI {
                 var cache  = cacheLoader[x];
                 
                 if(cache.endsWith('.json')) { 
-
-
-                    
                     //Grab the age of the file
                     var stats = await fs.statSync(`./cache/${cache}`);
                     //See how old the file is
@@ -117,12 +114,16 @@ module.exports = class PayPalAPI {
 
     async searchForBuyer(email, interaction) {
         var endDate     = new Date();
+        endDate.setDate(endDate.getDate() + 1);
+        
         var startDate   = this.thirtyDaysAgo(endDate);
         var member      = interaction.member.user.tag + ` (${interaction.member.id})`;
 
         console.log(`${member} > Searching for ${email}`);
 
         for(var i = 0; i < config.PayPal[0].monthsToCheck; i++) { 
+
+            console.log(`${member} > Searching ${startDate} to ${endDate}`);
             var foundBuyer = await this.searchBuyerHistory(email, startDate, endDate);
             if(foundBuyer != false) {
                 return foundBuyer;
@@ -147,6 +148,7 @@ module.exports = class PayPalAPI {
             qs: {
                 'start_date': startDate.toISOString(),
                 'end_date': endDate.toISOString(),
+                'transaction_status': 'S',
                 'fields': 'all'
             }
         };
@@ -170,8 +172,11 @@ module.exports = class PayPalAPI {
             var searchFor = config.Verify[i]['searchFor'].toLowerCase();
 
             for(var x = 0; x < history.length; x++) {
+                if(!history[x].payer_info.email_address == undefined) continue;
+
                 if(history[x].payer_info.email_address == email) {
                     var details = history[x].cart_info.item_details;
+                    
                     
                     if(details != undefined) {
                         for(var y = 0; y < details.length; y++) {
